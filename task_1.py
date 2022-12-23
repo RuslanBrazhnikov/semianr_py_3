@@ -6,9 +6,14 @@
 
 my_list = [2, 3, 5, 9, 3]
 
-summ = 0
-len_list = len(my_list)
 
-for i in range(1, len_list, 2):
-    summ += my_list[i]
-print(summ)
+def index(list):
+    summ = 0
+    len_list = len(my_list)
+    for i in range(1, len_list, 2):
+        summ += my_list[i]
+    return summ
+
+
+summ_index = index(my_list)
+print(f'Сумма элементов c нечетными индексами = {summ_index}')
