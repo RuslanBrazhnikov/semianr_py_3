@@ -4,23 +4,19 @@
 # Пример:
 # [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
-my_list = [1.1, 1.2, 3.1, 5, 10.01]
 
 
 def minus_list(list):
-    len_list = len(list)
-    for i in range(0, len_list):
-        count = 0
-        while count < len_list:
-            summ = list[i]
-            if summ > list[i]:
-                summ_1 = list[i]
-            else:
-                summ2 = list[i]
-                count += 1
-                summ3 = summ_1 - summ2
-            return summ3
+    max_min = []
+    for i in range(len(list)):
+        if list[i] % 1 != 0:
+            max_min.append(list[i] % 1)
+    return max(max_min) - min(max_min)
 
 
-minus_index = minus_list(my_list)
-print(minus_index)
+my_list = [1.1, 1.2, 3.1, 5, 10.01]
+print(*my_list, sep=', ', end='.')
+
+res = minus_list(my_list)
+print(f'\nРазница между максимальынм и минимальным значением дробной части элементов = {round(res, 2)}')
+
