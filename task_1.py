@@ -5,7 +5,7 @@
 
 
 my_list = [2, 3, 5, 9, 3]
-
+print(*my_list, sep=', ', end='.')
 
 def index(list):
     summ = 0
@@ -16,4 +16,4 @@ def index(list):
 
 
 summ_index = index(my_list)
-print(f'Сумма элементов c нечетными индексами = {summ_index}')
+print(f'\nСумма элементов списка c нечетными индексами = {summ_index}')
